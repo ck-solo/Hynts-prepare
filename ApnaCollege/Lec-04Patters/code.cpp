@@ -85,7 +85,7 @@ using namespace std;
 //     return 0;
 // }
 
-
+// Alphabet Triangel Pattern
 // int main(){
 //     int n = 3;
 //     char ch = 'A';
@@ -141,7 +141,7 @@ using namespace std;
 // }
 
 
-
+// Floyd Traingle Number Pattern 
 // int main(){
 //     int n = 3;
 //     int num = 1;
@@ -149,8 +149,24 @@ using namespace std;
 //         for(int j =1; j<= i+ 1; j++){
 //             cout << num << " ";
 //             num++;
-//         }
+//         } 
 //     cout << endl;
 //     }
 //     return 0;
 // }
+
+
+// Floyd Traingle Alphabet Patter
+int main(){
+    int n = 4;
+    for(int i = 0; i <=n; i++){
+        char ch = 'A' + i;
+        for(int j = 0; j <= i; j++){
+            cout << ch << " ";
+            ch--; 
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
