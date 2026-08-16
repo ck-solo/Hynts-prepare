@@ -11,17 +11,20 @@ using namespace std;
 //     return s;
 // }
 
-// int minOfTwo(int a, int b){
-// if(a<b){
-//     return a ;
-// }else{
-//     return b;
-// }
-// }
+ 
+// sum up to n 
 
-int main(){
-   cout << minOfTwo(15,5) ;
-    return 0;
+int sumN(int n ){
+    int sum = 0;
+    for(int i = 0; i<=n;i++){
+        sum=sum+i;
+    }
+    return sum ;
 }
 
+int main(){
+    cout << sumN(5) << endl;
+    return 0;
+}
+  
 
