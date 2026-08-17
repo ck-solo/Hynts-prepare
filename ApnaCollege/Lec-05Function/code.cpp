@@ -74,6 +74,40 @@ int factorial(int n){
     return fact;
 }
 
+bool isPrime(int n) {
+    if (n < 2)
+        return false;
+
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0)
+            return false;
+    }
+
+    return true;
+}
+
+long long factorial(int n) {
+    long long fact = 1;
+
+    for (int i = 1; i <= n; i++) {
+        fact *= i;
+    }
+
+    return fact;
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    if (isPrime(n))
+        cout << factorial(n);
+    else
+        cout << "Not a prime number";
+
+    return 0;
+}
+
 int nCr(int n, int r ){
      int fact_n = factorial(n);
      int fact_r = factorial(r);
@@ -88,3 +122,5 @@ int main(){
     cout << nCr(n,r) << endl;
     return 0;
 }
+
+int main
