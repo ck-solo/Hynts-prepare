@@ -66,25 +66,51 @@ using namespace std;
 
 // nCr Binomial coefficient for n & r
 
-int factorial(int n){
-    int fact = 1;
-    for(int i = 1; i <=n; i++){
-        fact = fact * i;
-    }
-    return fact;
-}
+// int factorial(int n){
+//     int fact = 1;
+//     for(int i = 1; i <=n; i++){
+//         fact = fact * i;
+//     }
+//     return fact;
+// }
 
-int nCr(int n, int r ){
-     int fact_n = factorial(n);
-     int fact_r = factorial(r);
-     int fact_n_minus_r = factorial(n-r); 
-     return (fact_n/ (fact_r*fact_n_minus_r));
+// int nCr(int n, int r ){
+//      int fact_n = factorial(n);
+//      int fact_r = factorial(r);
+//      int fact_n_minus_r = factorial(n-r); 
+//      return (fact_n/ (fact_r*fact_n_minus_r));
+// }
+
+// int main(){
+//     int n = 5;
+//     int r = 3;
+    
+//     cout << nCr(n,r) << endl;
+//     return 0;
+// }
+
+
+// check is prime or not
+int prime(int n){
+    int flag = 0;
+    for(int i = 2; i<=n; i++){
+        if (n % i == 0){
+            flag = 1;
+            break;
+        }
+    }
+    if(flag == 1){
+        cout << "Prime" << endl;
+    }
+    else{
+        cout << "Not Prime" << endl;
+    }
+    return 0;
 }
 
 int main(){
     int n = 5;
-    int r = 3;
-    
-    cout << nCr(n,r) << endl;
+    prime(n);
     return 0;
 }
+ 
