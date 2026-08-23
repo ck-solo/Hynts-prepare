@@ -18,9 +18,11 @@ using namespace std;
 
 
 int main(){
-    int marks[] = {99, 100, 54, 36, 88};
     int size = 5; 
-    // cout << sizeof(marks) << endl;
+    int marks[size] ; 
+    for(int i = 0; i<size; i++){
+        cin >> marks[i];
+    }
     for(int i = 0; i<size; i++){
         cout << marks[i] << endl;
     }
