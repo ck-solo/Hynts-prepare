@@ -32,16 +32,29 @@ using namespace std;
 
 // Find smallest / largest in Array
 
+// int main(){
+//     int nums[] = {5, 15, 22, 1, -15,24};
+//     int size = 6;
+//     int smallest = INT_MAX;
+//     int largest = INT_MIN;
+//     for(int i =0; i<= size; i++){
+//         smallest = min(nums[i], smallest);
+//         largest = max(nums[i], largest);
+//     }    
+//     cout << "Smallest : " << smallest << endl;
+//     cout << "Largest : " << largest << endl;
+//     return 0;
+// }
+
+
+// Add the array values
+
 int main(){
-    int nums[] = {5, 15, 22, 1, -15,24};
-    int size = 6;
-    int smallest = INT_MAX;
-    int largest = INT_MIN;
-    for(int i =0; i<= size; i++){
-        smallest = min(nums[i], smallest);
-        largest = max(nums[i], largest);
-    }    
-    cout << "Smallest : " << smallest << endl;
-    cout << "Largest : " << largest << endl;
+    int arr[5] = {1,2,3,4,5};
+    int sum = 0;
+    for(int i = 0; i < 5; i++){
+        sum += arr[i];
+    }
+    cout << "Sum of array : " << sum;
     return 0;
 }
