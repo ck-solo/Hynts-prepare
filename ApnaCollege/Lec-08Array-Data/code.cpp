@@ -61,22 +61,44 @@ using namespace std;
 
 
 // Pass By Reference 
- void changeArr(int arr[5], int size){
-    cout << "in Function\n";
-    for(int i = 0; i< size; i++){
-        arr[i] = 2 * arr[i];
+//  void changeArr(int arr[5], int size){
+//     cout << "in Function\n";
+//     for(int i = 0; i< size; i++){
+//         arr[i] = 2 * arr[i];
+//     }
+//  }
+
+//  int main(){
+//     int arr[] = {1,2,3};
+//     changeArr(arr, 3);
+
+//     cout << "in main\n";
+//     for(int i = 0; i<3; i++){
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+
+//     return 0;
+//  }
+
+
+// Linear Search 
+int main(){
+    int array[] = {4,2,7,8,5,124,17,6,12,15,9,13,14,78};
+    int size = 14;
+    int target = 12; 
+    int index = -1;
+    for(int i = 0; i<=size; i++){ 
+        if(array[i] == target){
+            index = i;
+            break;
+        }
     }
- }
-
- int main(){
-    int arr[] = {1,2,3};
-    changeArr(arr, 3);
-
-    cout << "in main\n";
-    for(int i = 0; i<3; i++){
-        cout << arr[i] << " ";
+    if(index != -1){
+        cout << "Element is present at index " << index << endl;
+    }else{
+        cout << "Element is not present in the array" << endl;
     }
-    cout << endl;
-
+    
     return 0;
- }
+}
