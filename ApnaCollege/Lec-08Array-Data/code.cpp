@@ -49,12 +49,34 @@ using namespace std;
 
 // Add the array values
 
-int main(){
-    int arr[5] = {1,2,3,4,5};
-    int sum = 0;
-    for(int i = 0; i < 5; i++){
-        sum += arr[i];
+// int main(){
+//     int arr[5] = {1,2,3,4,5};
+//     int sum = 0;
+//     for(int i = 0; i < 5; i++){
+//         sum += arr[i];
+//     }
+//     cout << "Sum of array : " << sum;
+//     return 0;
+// }
+
+
+// Pass By Reference 
+ void changeArr(int arr[5], int size){
+    cout << "in Function\n";
+    for(int i = 0; i< size; i++){
+        arr[i] = 2 * arr[i];
     }
-    cout << "Sum of array : " << sum;
+ }
+
+ int main(){
+    int arr[] = {1,2,3};
+    changeArr(arr, 3);
+
+    cout << "in main\n";
+    for(int i = 0; i<3; i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
     return 0;
-}
+ }
