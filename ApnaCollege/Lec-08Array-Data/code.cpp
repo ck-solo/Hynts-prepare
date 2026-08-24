@@ -83,22 +83,45 @@ using namespace std;
 
 
 // Linear Search 
+// int main(){
+//     int array[] = {4,2,7,8,5,124,17,6,12,15,9,13,14,78};
+//     int size = 14;
+//     int target = 12; 
+//     int index = -1;
+//     for(int i = 0; i<=size; i++){ 
+//         if(array[i] == target){
+//             index = i;
+//             break;
+//         }
+//     }
+//     if(index != -1){
+//         cout << "Element is present at index " << index << endl;
+//     }else{
+//         cout << "Element is not present in the array" << endl;
+//     }
+    
+//     return 0;
+// }
+
+
+int linearSearch(int arr[], int size, int target){
+    for(int i=0; i<size; i++ ){
+        if(arr[i] == target){
+            return i;
+        }
+    } 
+    return -1;
+}
+
 int main(){
-    int array[] = {4,2,7,8,5,124,17,6,12,15,9,13,14,78};
+    int arr[] = {4,2,7,8,5,124,17,6,12,15,9,13,14,78};
     int size = 14;
     int target = 12; 
-    int index = -1;
-    for(int i = 0; i<=size; i++){ 
-        if(array[i] == target){
-            index = i;
-            break;
-        }
-    }
+    int index = linearSearch(arr, size, target);
     if(index != -1){
         cout << "Element is present at index " << index << endl;
     }else{
         cout << "Element is not present in the array" << endl;
     }
-    
     return 0;
 }
