@@ -104,24 +104,46 @@ using namespace std;
 // }
 
 
-int linearSearch(int arr[], int size, int target){
-    for(int i=0; i<size; i++ ){
-        if(arr[i] == target){
-            return i;
-        }
-    } 
-    return -1;
+// int linearSearch(int arr[], int size, int target){
+//     for(int i=0; i<size; i++ ){
+//         if(arr[i] == target){
+//             return i;
+//         }
+//     } 
+//     return -1;
+// }
+
+// int main(){
+//     int arr[] = {4,2,7,8,5,124,17,6,12,15,9,13,14,78};
+//     int size = 14;
+//     int target = 12; 
+//     int index = linearSearch(arr, size, target);
+//     if(index != -1){
+//         cout << "Element is present at index " << index << endl;
+//     }else{
+//         cout << "Element is not present in the array" << endl;
+//     }
+//     return 0;
+// }
+
+// reverse an array
+
+void reverseArray(int arr[], int n) {
+    int left = 0;
+    int right = n - 1;
+    while (left < right) {
+        swap(arr[left], arr[right]);
+        left++;
+        right--;
+    }
 }
 
-int main(){
-    int arr[] = {4,2,7,8,5,124,17,6,12,15,9,13,14,78};
-    int size = 14;
-    int target = 12; 
-    int index = linearSearch(arr, size, target);
-    if(index != -1){
-        cout << "Element is present at index " << index << endl;
-    }else{
-        cout << "Element is not present in the array" << endl;
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = 5;
+    reverseArray(arr, n);
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
     }
     return 0;
 }
