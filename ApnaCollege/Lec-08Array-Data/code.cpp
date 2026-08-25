@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 // int main(){
@@ -128,22 +129,41 @@ using namespace std;
 
 // reverse an array
 
-void reverseArray(int arr[], int n) {
-    int left = 0;
-    int right = n - 1;
-    while (left < right) {
-        swap(arr[left], arr[right]);
-        left++;
-        right--;
-    }
-}
+// void reverseArray(int arr[], int n) {
+//     int left = 0;
+//     int right = n - 1;
+//     while (left < right) {
+//         swap(arr[left], arr[right]);
+//         left++;
+//         right--;
+//     }
+// }
+
+// int main() {
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int n = 5;
+//     reverseArray(arr, n);
+//     for (int i = 0; i < n; i++) {
+//         cout << arr[i] << " ";
+//     }
+//     return 0;
+// }
+
+
+// linear search for a value that appears twice
+
 
 int main() {
-    int arr[] = {1, 2, 3, 4, 5};
-    int n = 5;
-    reverseArray(arr, n);
-    for (int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
+    vector<int> arr = {10, 20, 30, 20, 40};
+    int target = 20;
+    vector<int> indices;
+    for (int i = 0; i < arr.size(); i++) {
+        if (arr[i] == target) {
+            indices.push_back(i);
+        }
+    }
+    for (int index : indices) {
+        cout << index << " ";
     }
     return 0;
 }
