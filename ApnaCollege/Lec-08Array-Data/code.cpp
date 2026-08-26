@@ -153,17 +153,43 @@ using namespace std;
 // linear search for a value that appears twice
 
 
-int main() {
-    vector<int> arr = {10, 20, 30, 20, 40};
-    int target = 20;
-    vector<int> indices;
-    for (int i = 0; i < arr.size(); i++) {
-        if (arr[i] == target) {
-            indices.push_back(i);
-        }
+// int main() {
+//     vector<int> arr = {10, 20, 30, 20, 40};
+//     int target = 20;
+//     vector<int> indices;
+//     for (int i = 0; i < arr.size(); i++) {
+//         if (arr[i] == target) {
+//             indices.push_back(i);
+//         }
+//     }
+//     for (int index : indices) {
+//         cout << index << " ";
+//     }
+//     return 0;
+// }
+
+
+
+// Conatenate Array With Reverse
+ vector<int> Concatenate(int nums[], int n) {
+    vector<int> ans;
+    // Original array
+    for (int i = 0; i < n; i++) {
+        ans.push_back(nums[i]);
     }
-    for (int index : indices) {
-        cout << index << " ";
+    // Reverse of array
+    for (int i = n - 1; i >= 0; i--) {
+        ans.push_back(nums[i]);
+    }
+    return ans;
+}
+
+int main() {
+    int nums[] = {1, 2, 3};
+    int n = sizeof(nums) / sizeof(nums[0]);
+    vector<int> ans = Concatenate(nums, n);
+    for (int x : ans) {
+        cout << x << " ";
     }
     return 0;
 }
