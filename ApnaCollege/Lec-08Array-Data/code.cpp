@@ -197,26 +197,49 @@ using namespace std;
 //Find Largest and second largest in array 
 
 
- int findLargest(int nums[], int n) {
+//  int findLargest(int nums[], int n) {
+//     int largest = nums[0];
+//     for (int i = 1; i < n; i++) {
+//         if (nums[i] > largest) {
+//             largest = nums[i];
+//         }
+//     }
+
+//     return largest;
+// }
+
+// int main() {
+//     int nums[] = {4, 2, 9, 1, 7};
+//     int n = sizeof(nums) / sizeof(nums[0]);
+//     int ans = findLargest(nums, n);
+//     cout << "Largest element: " << ans;
+//     return 0;
+// }   
+
+
+
+//Second largest in array
+
+int secondLargest(int nums[], int n) {
     int largest = nums[0];
+    int second = -1;
 
     for (int i = 1; i < n; i++) {
         if (nums[i] > largest) {
+            second = largest;
             largest = nums[i];
         }
+        else if (nums[i] > second && nums[i] != largest) {
+            second = nums[i];
+        }
     }
-
-    return largest;
+    return second;
 }
 
 int main() {
-    int nums[] = {4, 2, 9, 1, 7};
+    int nums[] = {1, 5, 2, 8, 3};
     int n = sizeof(nums) / sizeof(nums[0]);
-
-    int ans = findLargest(nums, n);
-
-    cout << "Largest element: " << ans;
-
+    int ans = secondLargest(nums, n);
+    cout << "Second largest: " << ans;
     return 0;
-
-}   
+}
