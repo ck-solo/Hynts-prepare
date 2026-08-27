@@ -171,25 +171,52 @@ using namespace std;
 
 
 // Conatenate Array With Reverse
- vector<int> Concatenate(int nums[], int n) {
-    vector<int> ans;
-    // Original array
-    for (int i = 0; i < n; i++) {
-        ans.push_back(nums[i]);
+//  vector<int> Concatenate(int nums[], int n) {
+//     vector<int> ans;
+//     // Original array
+//     for (int i = 0; i < n; i++) {
+//         ans.push_back(nums[i]);
+//     }
+//     // Reverse of array
+//     for (int i = n - 1; i >= 0; i--) {
+//         ans.push_back(nums[i]);
+//     }
+//     return ans;
+// }
+
+// int main() {
+//     int nums[] = {1, 2, 3};
+//     int n = sizeof(nums) / sizeof(nums[0]);
+//     vector<int> ans = Concatenate(nums, n);
+//     for (int x : ans) {
+//         cout << x << " ";
+//     }
+//     return 0;
+// }
+
+//Find Largest and second largest in array 
+
+
+ int findLargest(int nums[], int n) {
+    int largest = nums[0];
+
+    for (int i = 1; i < n; i++) {
+        if (nums[i] > largest) {
+            largest = nums[i];
+        }
     }
-    // Reverse of array
-    for (int i = n - 1; i >= 0; i--) {
-        ans.push_back(nums[i]);
-    }
-    return ans;
+
+    return largest;
 }
 
 int main() {
-    int nums[] = {1, 2, 3};
+    int nums[] = {4, 2, 9, 1, 7};
     int n = sizeof(nums) / sizeof(nums[0]);
-    vector<int> ans = Concatenate(nums, n);
-    for (int x : ans) {
-        cout << x << " ";
-    }
+
+    int ans = findLargest(nums, n);
+
+    cout << "Largest element: " << ans;
+
     return 0;
-}
+
+}   
