@@ -220,26 +220,50 @@ using namespace std;
 
 //Second largest in array
 
-int secondLargest(int nums[], int n) {
-    int largest = nums[0];
-    int second = -1;
+// int secondLargest(int nums[], int n) {
+//     int largest = nums[0];
+//     int second = -1;
 
-    for (int i = 1; i < n; i++) {
-        if (nums[i] > largest) {
-            second = largest;
-            largest = nums[i];
-        }
-        else if (nums[i] > second && nums[i] != largest) {
-            second = nums[i];
+//     for (int i = 1; i < n; i++) {
+//         if (nums[i] > largest) {
+//             second = largest;
+//             largest = nums[i];
+//         }
+//         else if (nums[i] > second && nums[i] != largest) {
+//             second = nums[i];
+//         }
+//     }
+//     return second;
+// }
+
+// int main() {
+//     int nums[] = {1, 5, 2, 8, 3};
+//     int n = sizeof(nums) / sizeof(nums[0]);
+//     int ans = secondLargest(nums, n);
+//     cout << "Second largest: " << ans;
+//     return 0;
+// }
+
+
+
+//ind the index of the target
+int searchElement(int nums[], int n, int target) {
+    for (int i = 0; i < n; i++) {
+        if (nums[i] == target) {
+            return i;
         }
     }
-    return second;
+    return -1;
 }
 
 int main() {
-    int nums[] = {1, 5, 2, 8, 3};
+    int nums[] = {10, 20, 30, 40, 50};
     int n = sizeof(nums) / sizeof(nums[0]);
-    int ans = secondLargest(nums, n);
-    cout << "Second largest: " << ans;
+    int target = 110;
+    int ans = searchElement(nums, n, target);
+    if (ans != -1)
+        cout << "Element found at index: " << ans;
+    else
+        cout << "Element not found";
     return 0;
 }
