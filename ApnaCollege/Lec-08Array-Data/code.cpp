@@ -271,15 +271,36 @@ using namespace std;
 
 // Find the sum of all even elements.
 
+// int main() {
+//     int nums[] = {10, 15, 20, 7, 8, 11};
+//     int n = sizeof(nums) / sizeof(nums[0]);
+//     int sum = 0;
+//     for (int i = 0; i < n; i++) {
+//         if (nums[i] % 2 == 0) {
+//             sum += nums[i];
+//         }
+//     }
+//     cout << "Sum of even numbers: " << sum;
+//     return 0;
+// }
+
+// Count positive, negative and zero
 int main() {
-    int nums[] = {10, 15, 20, 7, 8, 11};
+    int nums[] = {10, -5, 0, 7, -2, 0, 15};
     int n = sizeof(nums) / sizeof(nums[0]);
-    int sum = 0;
+    int positive = 0;
+    int negative = 0;
+    int zero = 0;
     for (int i = 0; i < n; i++) {
-        if (nums[i] % 2 == 0) {
-            sum += nums[i];
-        }
+        if (nums[i] > 0)
+            positive++;
+        else if (nums[i] < 0)
+            negative++;
+        else
+            zero++;
     }
-    cout << "Sum of even numbers: " << sum;
+    cout << "Positive: " << positive << endl;
+    cout << "Negative: " << negative << endl;
+    cout << "Zero: " << zero << endl;
     return 0;
 }
