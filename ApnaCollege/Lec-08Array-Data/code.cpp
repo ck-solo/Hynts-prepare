@@ -247,23 +247,39 @@ using namespace std;
 
 
 //ind the index of the target
-int searchElement(int nums[], int n, int target) {
-    for (int i = 0; i < n; i++) {
-        if (nums[i] == target) {
-            return i;
-        }
-    }
-    return -1;
-}
+// int searchElement(int nums[], int n, int target) {
+//     for (int i = 0; i < n; i++) {
+//         if (nums[i] == target) {
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+
+// int main() {
+//     int nums[] = {10, 20, 30, 40, 50};
+//     int n = sizeof(nums) / sizeof(nums[0]);
+//     int target = 110;
+//     int ans = searchElement(nums, n, target);
+//     if (ans != -1)
+//         cout << "Element found at index: " << ans;
+//     else
+//         cout << "Element not found";
+//     return 0;
+// }
+
+
+// Find the sum of all even elements.
 
 int main() {
-    int nums[] = {10, 20, 30, 40, 50};
+    int nums[] = {10, 15, 20, 7, 8, 11};
     int n = sizeof(nums) / sizeof(nums[0]);
-    int target = 110;
-    int ans = searchElement(nums, n, target);
-    if (ans != -1)
-        cout << "Element found at index: " << ans;
-    else
-        cout << "Element not found";
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        if (nums[i] % 2 == 0) {
+            sum += nums[i];
+        }
+    }
+    cout << "Sum of even numbers: " << sum;
     return 0;
 }
