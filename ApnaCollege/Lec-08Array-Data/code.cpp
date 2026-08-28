@@ -285,22 +285,37 @@ using namespace std;
 // }
 
 // Count positive, negative and zero
+// int main() {
+//     int nums[] = {10, -5, 0, 7, -2, 0, 15};
+//     int n = sizeof(nums) / sizeof(nums[0]);
+//     int positive = 0;
+//     int negative = 0;
+//     int zero = 0;
+//     for (int i = 0; i < n; i++) {
+//         if (nums[i] > 0)
+//             positive++;
+//         else if (nums[i] < 0)
+//             negative++;
+//         else
+//             zero++;
+//     }
+//     cout << "Positive: " << positive << endl;
+//     cout << "Negative: " << negative << endl;
+//     cout << "Zero: " << zero << endl;
+//     return 0;
+// }
+
+
+//  Find the average of array elements
+
 int main() {
-    int nums[] = {10, -5, 0, 7, -2, 0, 15};
+    int nums[] = {10, 20, 30, 40, 50};
     int n = sizeof(nums) / sizeof(nums[0]);
-    int positive = 0;
-    int negative = 0;
-    int zero = 0;
+    int sum = 0;
     for (int i = 0; i < n; i++) {
-        if (nums[i] > 0)
-            positive++;
-        else if (nums[i] < 0)
-            negative++;
-        else
-            zero++;
+        sum += nums[i];
     }
-    cout << "Positive: " << positive << endl;
-    cout << "Negative: " << negative << endl;
-    cout << "Zero: " << zero << endl;
+    double average = (double)sum / n;
+    cout << "Average: " << average;
     return 0;
 }
