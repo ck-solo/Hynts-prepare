@@ -308,14 +308,33 @@ using namespace std;
 
 //  Find the average of array elements
 
+// int main() {
+//     int nums[] = {10, 20, 30, 40, 50};
+//     int n = sizeof(nums) / sizeof(nums[0]);
+//     int sum = 0;
+//     for (int i = 0; i < n; i++) {
+//         sum += nums[i];
+//     }
+//     double average = (double)sum / n;
+//     cout << "Average: " << average;
+//     return 0;
+// }
+
+// target appear
 int main() {
-    int nums[] = {10, 20, 30, 40, 50};
+    int nums[] = {10, 20, 10, 30, 10, 40};
     int n = sizeof(nums) / sizeof(nums[0]);
-    int sum = 0;
+
+    int target = 10;
+    int count = 0;
+
     for (int i = 0; i < n; i++) {
-        sum += nums[i];
+        if (nums[i] == target) {
+            count++;
+        }
     }
-    double average = (double)sum / n;
-    cout << "Average: " << average;
+
+    cout << target << " appears " << count << " times";
+
     return 0;
 }
