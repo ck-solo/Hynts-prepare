@@ -321,20 +321,32 @@ using namespace std;
 // }
 
 // target appear
+// int main() {
+//     int nums[] = {10, 20, 10, 30, 10, 40};
+//     int n = sizeof(nums) / sizeof(nums[0]);
+//     int target = 10;
+//     int count = 0;
+//     for (int i = 0; i < n; i++) {
+//         if (nums[i] == target) {
+//             count++;
+//         }
+//     }
+//     cout << target << " appears " << count << " times";
+//     return 0;
+// }
+
+
+// Rotate array 
 int main() {
-    int nums[] = {10, 20, 10, 30, 10, 40};
+    int nums[] = {1, 2, 3, 4, 5};
     int n = sizeof(nums) / sizeof(nums[0]);
-
-    int target = 10;
-    int count = 0;
-
-    for (int i = 0; i < n; i++) {
-        if (nums[i] == target) {
-            count++;
-        }
+    int first = nums[0];
+    for (int i = 0; i < n - 1; i++) {
+        nums[i] = nums[i + 1];
     }
-
-    cout << target << " appears " << count << " times";
-
+    nums[n - 1] = first;
+    for (int i = 0; i < n; i++) {
+        cout << nums[i] << " ";
+    }
     return 0;
 }
