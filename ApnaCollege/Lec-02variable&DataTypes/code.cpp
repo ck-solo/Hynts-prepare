@@ -33,6 +33,9 @@ using namespace std;
 // }
 
 // type casting 
+ 
+
+// revise
 int main(){
     int a = 52;
     double b = 5;
