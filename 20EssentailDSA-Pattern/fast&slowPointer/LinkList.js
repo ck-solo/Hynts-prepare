@@ -68,15 +68,32 @@
 
 
 // search of value 
-function search(head, value) {
+// function search(head, value) {
+//     let current = head;
+//     while (current !== null) {
+//         if (current.val === value) {
+//             return true;
+//         }
+//         current = current.next;
+//     }
+//     return false;
+// } 
+
+
+// find the maximum value 
+function findMax(head) {
+    if (head === null) {
+        return null;
+    }
     let current = head;
+    let max = head.val;
     while (current !== null) {
-        if (current.val === value) {
-            return true;
+        if (current.val > max) {
+            max = current.val;
         }
         current = current.next;
     }
-    return false;
+    return max;
 }
 
 
