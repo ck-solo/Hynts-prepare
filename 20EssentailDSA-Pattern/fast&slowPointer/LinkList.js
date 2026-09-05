@@ -118,3 +118,18 @@ function findMax(head) {
 // }
 
 
+// max 
+// function findMax(head) {
+//     if (head === null) {
+//         return null;
+//     }
+//     let current = head;
+//     let max = head.val;
+//     while (current !== null) {
+//         if (current.val > max) {
+//             max = current.val;
+//         }
+//         current = current.next;
+//     }
+//     return max;
+// }
