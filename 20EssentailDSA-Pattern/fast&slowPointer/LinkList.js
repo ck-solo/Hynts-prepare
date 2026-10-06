@@ -67,6 +67,16 @@
 // }
 
 
+//function sumList(head) {
+//     let current = head;
+//     let sum = 0;
+//     while (current !== null) {
+//         sum = sum + current.val;
+//         current = current.next;
+//     }
+//     return sum;
+// }
+
 // search of value 
 // function search(head, value) {
 //     let current = head;
